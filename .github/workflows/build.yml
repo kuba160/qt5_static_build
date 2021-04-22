@@ -1,0 +1,23 @@
+name: Build Qt
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    name: CI for Linux
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies for Linux
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get build-dep -y -qq qt5-default
+        sudo apt-get install -y -qq libxcb-xinerama0-dev git zip
+        sudo apt-get install -y -qq '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev \
+          libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+    - name: Build for Linux
+      run: chmod +x ./build_linux.sh; ./build_linux.sh
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: linux
+        path: *.zip
