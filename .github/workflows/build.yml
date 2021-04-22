@@ -9,8 +9,9 @@ jobs:
     steps:
     - name: Install dependencies for Linux
       run: |
-        cat /etc/apt/sources.list
-        cat /etc/apt/sources.list.d/*
+        sudo sed -i '/deb-src/s/^#//g' /etc/apt/sources.list
+        cat -n /etc/apt/sources.list
+        cat -n /etc/apt/sources.list.d/*
         sudo apt-get -qq update
         sudo add-apt-repository -s -y `cat /etc/apt/sources.list`
         sudo apt-get build-dep -y -qq qt5-default
