@@ -13,7 +13,6 @@ jobs:
         cat -n /etc/apt/sources.list
         cat -n /etc/apt/sources.list.d/*
         sudo apt-get -qq update
-        sudo add-apt-repository -s -y `cat /etc/apt/sources.list`
         sudo apt-get build-dep -y -qq qt5-default
         sudo apt-get install -y -qq libxcb-xinerama0-dev git zip
         sudo apt-get install -y -qq '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev \
