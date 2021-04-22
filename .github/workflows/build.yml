@@ -12,7 +12,7 @@ jobs:
         sudo sed -i '/deb-src/s/^#//g' /etc/apt/sources.list
         sudo apt-get -qq update
         sudo apt-get build-dep -y -qq qt5-default
-        sudo apt-get install -y -qq libxcb-xinerama0-dev git zip
+        sudo apt-get install -y -qq libxcb-xinerama0-dev git zip perl
         sudo apt-get install -y -qq '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev \
           libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
     - name: Checkout for Linux
