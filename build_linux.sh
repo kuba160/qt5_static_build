@@ -5,8 +5,11 @@ export QT_GIT=git://code.qt.io/qt/qt5.git
 export OUTPUT_DIR="qt5_static"
 
 git clone -b $VERSION --single-branch $QT_GIT   ;true
-perl qt5/init-repository --module-subset=default,-qtwebengine
+cd qt5; perl qt5/init-repository --module-subset=default,-qtwebengine
 cd qt5; git submodule update --init --recursive ;true
+
+ls 
+ls qt5 -l
 
 qt5/configure -confirm-license \
     -opensource -nomake examples -nomake tests -static \
