@@ -7,7 +7,7 @@ export OUTPUT_DIR="qt5_static"
 git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
 
-perl qt5/init-repository --module-subset=default,-qtwebengine
+perl init-repository --module-subset=default,-qtwebengine
 git submodule update --init --recursive ;true
 
 mkdir build
