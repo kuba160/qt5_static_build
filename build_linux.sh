@@ -5,15 +5,17 @@ export QT_GIT=git://code.qt.io/qt/qt5.git
 export OUTPUT_DIR="qt5_static"
 
 git clone -b $VERSION --single-branch $QT_GIT   ;true
-cd qt5; perl qt5/init-repository --module-subset=default,-qtwebengine
-cd qt5; git submodule update --init --recursive ;true
+cd qt5;
 
-ls 
-ls qt5 -l
+perl qt5/init-repository --module-subset=default,-qtwebengine
+git submodule update --init --recursive ;true
 
-qt5/configure -confirm-license \
+mkdir build
+cd build
+
+../configure -confirm-license \
     -opensource -nomake examples -nomake tests -static \
-    -prefix $OUTPUT_DIR     \
+    -prefix ~/$OUTPUT_DIR   \
     -sysconfdir /etc/xdg    \
     -dbus-linked            \
     -openssl-linked         \
@@ -24,4 +26,4 @@ qt5/configure -confirm-license \
 
 make
 make install
-zip -r qt_$VERSION_static_linux.zip qt5_qtatic
+zip -r qt_$VERSION_static_linux.zip ~/$OUTPUT_DIR
