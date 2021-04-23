@@ -6,6 +6,7 @@ jobs:
   build:
     name: CI for Linux
     runs-on: ubuntu-latest
+    container: ubuntu:14.04
     steps:
     - name: Install dependencies for Linux
       run: |
@@ -23,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: linux
-        path: ./*.zip
+        path: ./qt5/build/*.zip

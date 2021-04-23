@@ -1,6 +1,6 @@
 #!/bin/sh
 set -x
-export VERSION=5.15.2
+export VERSION=5.12.10
 export QT_GIT=git://code.qt.io/qt/qt5.git
 export OUTPUT_DIR="qt5_static"
 
@@ -18,10 +18,12 @@ cd build
     -prefix ~/$OUTPUT_DIR   \
     -sysconfdir /etc/xdg    \
     -dbus-linked            \
-    -openssl-linked         \
-    -system-harfbuzz        \
+    -no-openssl	            \
+    -qt-harfbuzz            \
     -system-sqlite          \
     -no-rpath               \
+    -iconv                  \
+    -no-icu                 \
     -skip qtwebengine
 
 make
