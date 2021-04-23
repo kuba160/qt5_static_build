@@ -8,7 +8,6 @@ git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
 
 perl init-repository --module-subset=default,-qtwebengine
-git submodule update --init --recursive ;true
 
 mkdir build
 cd build
