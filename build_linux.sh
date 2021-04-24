@@ -2,7 +2,7 @@
 set -x
 export VERSION=5.12.10
 export QT_GIT=git://code.qt.io/qt/qt5.git
-export OUTPUT_DIR="qt5_static"
+export OUTPUT_DIR="/opt/qt5_static"
 
 git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
@@ -14,7 +14,7 @@ cd build
 
 ../configure -confirm-license \
     -opensource -nomake examples -nomake tests -static \
-    -prefix ~/$OUTPUT_DIR   \
+    -prefix $OUTPUT_DIR     \
     -sysconfdir /etc/xdg    \
     -dbus-linked            \
     -no-openssl	            \
@@ -27,4 +27,6 @@ cd build
 
 make
 make install
-zip -r qt_$VERSION_static_linux.zip ~/$OUTPUT_DIR
+
+cd $OUTPUT_DIR/..
+zip -r /"qt_$VERSION"_static_linux.zip `basename $OUTPUT_DIR`
