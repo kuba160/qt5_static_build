@@ -4,6 +4,9 @@ export VERSION=5.12.10
 export QT_GIT=git://code.qt.io/qt/qt5.git
 export OUTPUT_DIR="/opt/qt5_static"
 
+# python fix
+ln -s /usr/bin/python3 /usr/bin/python
+
 git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
 
@@ -18,7 +21,7 @@ cd build
     -sysconfdir /etc/xdg    \
     -dbus-linked            \
     -no-openssl	            \
-    -qt-harfbuzz            \
+    -system-harfbuzz        \
     -system-sqlite          \
     -no-rpath               \
     -iconv                  \
