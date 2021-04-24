@@ -20,7 +20,7 @@ cd build
     -no-openssl	            \
     -qt-harfbuzz            \
     -system-sqlite          \
-    -rpath                  \
+    -no-rpath               \
     -iconv                  \
     -no-icu                 \
     -skip qtwebengine
