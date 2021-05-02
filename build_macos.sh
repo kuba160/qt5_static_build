@@ -25,10 +25,10 @@ cd build
     -qt-freetype            \
     -qt-pcre                \
     -no-rpath               \
-    -iconv                  \
     -no-icu                 \
     -dbus-runtime           \
     -skip qtwebengine
+    # missing iconv
 
 make
 make install
