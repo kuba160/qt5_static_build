@@ -17,6 +17,7 @@ cd build
 
 ../configure -confirm-license \
     -opensource -nomake examples -nomake tests -static \
+    -release                \
     -prefix $OUTPUT_DIR     \
     -sysconfdir /etc/xdg    \
     -system-zlib            \
