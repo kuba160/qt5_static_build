@@ -3,8 +3,8 @@ name: Build Qt
 on: [ push, pull_request ]
 
 jobs:
-  build:
-    name: CI for Linux
+  build_linux:
+    name: Static Qt for Linux
     runs-on: ubuntu-latest
     container: ubuntu:18.04
     steps:
@@ -25,3 +25,16 @@ jobs:
       with:
         name: linux
         path: /*.zip
+  build_macos:
+    name: Static Qt for macOS
+    runs-on: macos-latest
+    steps:
+    - name: Checkout for macOS
+      uses: actions/checkout@v1
+    - name: Build for macOS
+      run: chmod +x ./build_macos.sh; ./build_macos.sh
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: macos
+        path: qt5/build/*.zip
