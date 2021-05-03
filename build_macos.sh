@@ -2,7 +2,7 @@
 set -x
 export VERSION=5.12.10
 export QT_GIT=git://code.qt.io/qt/qt5.git
-export OUTPUT_DIR="/opt/qt5_static"
+export OUTPUT_DIR="`pwd`/qt5/build/qt5_static"
 
 # python fix
 ln -s /usr/bin/python3 /usr/bin/python; true
@@ -35,4 +35,4 @@ make
 make install
 
 cd $OUTPUT_DIR/..
-zip -r /opt/"qt_$VERSION"_static_macos.zip `basename $OUTPUT_DIR`
+zip -r "qt_$VERSION"_static_macos.zip `basename $OUTPUT_DIR`
