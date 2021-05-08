@@ -24,6 +24,8 @@ cd build
     -no-openssl	            \
     -system-harfbuzz        \
     -system-sqlite          \
+    -qt-doubleconversion    \
+    -qt-xcb                 \
     -no-rpath               \
     -iconv                  \
     -no-icu                 \
