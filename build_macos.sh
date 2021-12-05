@@ -5,6 +5,9 @@ export QT_GIT=git://code.qt.io/qt/qt5.git
 export MAIN_DIR="`pwd`"
 export OUTPUT_DIR="`pwd`/qt5/build/qt5_static"
 
+# ninja
+brew install ninja
+
 # python fix
 ln -s /usr/bin/python3 /usr/bin/python; true
 
