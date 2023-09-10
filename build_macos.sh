@@ -40,7 +40,8 @@ cd build
     -skip qtmultimedia      \
     -skip qthttpserver      \
     -skip qtlanguageserver  \
-    -skip qtpositioning
+    -skip qtpositioning     \
+    -skip qtlocation
     # missing iconv
 
 cmake --build . --parallel
