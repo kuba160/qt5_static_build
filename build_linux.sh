@@ -26,7 +26,6 @@ cd build
     -system-sqlite          \
     -qt-doubleconversion    \
     -no-rpath               \
-    -iconv                  \
     -no-icu                 \
     -skip qtwebengine       \
     -skip qt3d
