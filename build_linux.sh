@@ -18,6 +18,8 @@ cd build
 
 ../configure -confirm-license \
     -opensource -nomake examples -nomake tests -static \
+    -release                \
+    -optimize-size          \
     -prefix $OUTPUT_DIR     \
     -sysconfdir /etc/xdg    \
     -dbus-linked            \

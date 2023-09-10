@@ -14,7 +14,7 @@ ln -s /usr/bin/python3 /usr/bin/python; true
 git clone -b $VERSION --single-branch $QT_GIT; true
 cd qt5;
 
-perl init-repository --module-subset=default,-qtwebengine,-qt3d,-qtdoc,-qtquick3d,-qtquick3dphysics,-qtquicktimeline,-qtshadertools,-qttools
+perl init-repository --module-subset=default,-qtwebengine,-qt3d,-qtdoc,-qtquick3d,-qtquick3dphysics,-qtquicktimeline,-qtshadertools,-qttools,-qtquickeffectmaker
 
 mkdir build
 cd build
@@ -22,6 +22,7 @@ cd build
 ../configure -confirm-license \
     -opensource -nomake examples -nomake tests -static \
     -release                \
+    -optimize-size          \
     -prefix $OUTPUT_DIR     \
     -sysconfdir /etc/xdg    \
     -system-zlib            \
