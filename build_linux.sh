@@ -11,7 +11,7 @@ ln -s /usr/bin/python3 /usr/bin/python
 git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
 
-perl init-repository --module-subset=default,-qtwebengine,-qt3d,-qtdoc,-qtquick3d,-qtquick3dphysics,-qtquicktimeline,-qtshadertools
+perl init-repository --module-subset=default,-qtwebengine,-qt3d,-qtdoc,-qtquick3d,-qtquick3dphysics,-qtquicktimeline,-qtshadertools,-qtquickeffectmaker,-qtcoap
 
 mkdir build
 cd build
