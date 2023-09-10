@@ -34,7 +34,6 @@ cd build
     -dbus-runtime           \
     -skip qtwebengine       \
     -skip qtmultimedia      \
-    -skip qtquick3d         \
     -skip qtquick3dphysics  \
     -skip qtdatavis3d       \
     -skip qthttpserver      \
