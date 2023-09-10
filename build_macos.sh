@@ -14,7 +14,7 @@ ln -s /usr/bin/python3 /usr/bin/python; true
 git clone -b $VERSION --single-branch $QT_GIT; true
 cd qt5;
 
-perl init-repository --module-subset=default,-qtwebengine
+perl init-repository --module-subset=default,-qtwebengine,-qt3d,-qtdoc,-qtquick3d,-qtquick3dphysics,-qtquicktimeline,-qtshadertools,-qttools
 
 mkdir build
 cd build
@@ -25,13 +25,19 @@ cd build
     -prefix $OUTPUT_DIR     \
     -sysconfdir /etc/xdg    \
     -system-zlib            \
-    -qt-libpng              \
-    -qt-libjpeg             \
-    -qt-freetype            \
+    -dbus-runtime           \
+    -qt-doubleconversion    \
+    -qt-libb2               \
     -qt-pcre                \
+    -qt-libjpeg             \
+    -qt-libpng              \
+    -qt-libmd4c             \
+    -qt-freetype            \
     -no-rpath               \
     -no-icu                 \
-    -dbus-runtime           \
+    -no-tiff                \
+    -no-webp                \
+    -no-pch                 \
     -skip qtwebengine       \
     -skip qt3d              \
     -skip qtquick3d         \
@@ -41,8 +47,17 @@ cd build
     -skip qthttpserver      \
     -skip qtlanguageserver  \
     -skip qtpositioning     \
-    -skip qtlocation
-    # missing iconv
+    -skip qtlocation        \
+    -no-feature-androiddeployqt \
+    -no-feature-assistant   \
+    -no-feature-designer    \
+    -no-feature-http        \
+    -no-feature-network     \
+    -no-feature-sql         \
+    -no-feature-linguist    \
+    -no-feature-sqlmodel    \
+    -no-feature-wizard      \
+    -no-feature-xmlstream
 
 cmake --build . --parallel
 cmake --install .

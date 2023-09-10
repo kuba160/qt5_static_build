@@ -11,7 +11,7 @@ ln -s /usr/bin/python3 /usr/bin/python
 git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
 
-perl init-repository --module-subset=default,-qtwebengine
+perl init-repository --module-subset=default,-qtwebengine,-qt3d,-qtdoc,-qtquick3d,-qtquick3dphysics,-qtquicktimeline,-qtshadertools,-qttools
 
 mkdir build
 cd build
@@ -47,8 +47,10 @@ cd build
     -skip qtlocation        \
     -no-feature-androiddeployqt \
     -no-feature-assistant   \
-    -no-feature-designer    \ 
+    -no-feature-designer    \
     -no-feature-http        \
+    -no-feature-network     \
+    -no-feature-sql         \
     -no-feature-linguist    \
     -no-feature-sqlmodel    \
     -no-feature-wizard      \
