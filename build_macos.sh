@@ -32,7 +32,14 @@ cd build
     -no-rpath               \
     -no-icu                 \
     -dbus-runtime           \
-    -skip qtwebengine
+    -skip qtwebengine       \
+    -skip qtmultimedia      \
+    -skip qtquick3d         \
+    -skip qtquick3dphysics  \
+    -skip qtdatavis3d       \
+    -skip qthttpserver      \
+    -skip qtlanguageserver  \
+    -skip qtpositioning
     # missing iconv
 
 make
