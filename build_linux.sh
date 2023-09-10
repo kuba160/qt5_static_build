@@ -25,14 +25,14 @@ cd build
     -system-harfbuzz        \
     -system-sqlite          \
     -qt-doubleconversion    \
-    -qt-xcb                 \
     -no-rpath               \
     -iconv                  \
     -no-icu                 \
-    -skip qtwebengine
+    -skip qtwebengine       \
+    -skip qt3d
 
-make
-make install
+cmake --build . --parallel
+cmake --install .
 
 cp $MAIN_DIR"/qt.conf" $OUTPUT_DIR"/bin/qt.conf"
 
