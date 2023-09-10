@@ -50,7 +50,6 @@ cd build
     -skip qtlocation        \
     -no-feature-androiddeployqt \
     -no-feature-http        \
-    -no-feature-network     \
     -no-feature-sql         \
     -no-feature-sqlmodel    \
     -no-feature-wizard      \
