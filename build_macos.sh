@@ -32,11 +32,12 @@ cd build
     -no-rpath               \
     -no-icu                 \
     -dbus-runtime           \
-    -skip qtwebengine
+    -skip qtwebengine       \
+    -skip qt3d
     # missing iconv
 
-make
-make install
+cmake --build . --parallel
+cmake --install .
 
 cp $MAIN_DIR"/qt.conf" $OUTPUT_DIR"/bin/qt.conf"
 
