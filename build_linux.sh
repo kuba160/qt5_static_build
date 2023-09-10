@@ -54,10 +54,7 @@ cd build
     -no-feature-sql         \
     -no-feature-sqlmodel    \
     -no-feature-wizard      \
-    -no-feature-xmlstream   \
-    -no-feature-linguist    \
-    -no-feature-designer    \
-    -no-feature-assistant
+    -no-feature-xmlstream
 
 cmake --build . --parallel
 cmake --install .
