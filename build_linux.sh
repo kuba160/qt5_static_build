@@ -28,7 +28,15 @@ cd build
     -no-rpath               \
     -no-icu                 \
     -skip qtwebengine       \
-    -skip qt3d
+    -skip qt3d              \
+    -skip qtquick3d         \
+    -skip qtquick3dphysics  \
+    -skip qtdatavis3d       \
+    -skip qtmultimedia      \
+    -skip qthttpserver      \
+    -skip qtlanguageserver  \
+    -skip qtpositioning     \
+    -skip qtlocation
 
 cmake --build . --parallel
 cmake --install .
