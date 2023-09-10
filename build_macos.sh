@@ -33,7 +33,14 @@ cd build
     -no-icu                 \
     -dbus-runtime           \
     -skip qtwebengine       \
-    -skip qt3d
+    -skip qt3d              \
+    -skip qtquick3d         \
+    -skip qtquick3dphysics  \
+    -skip qtdatavis3d       \
+    -skip qtmultimedia      \
+    -skip qthttpserver      \
+    -skip qtlanguageserver  \
+    -skip qtpositioning
     # missing iconv
 
 cmake --build . --parallel
