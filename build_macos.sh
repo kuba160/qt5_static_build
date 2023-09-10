@@ -49,15 +49,13 @@ cd build
     -skip qtpositioning     \
     -skip qtlocation        \
     -no-feature-androiddeployqt \
-    -no-feature-assistant   \
-    -no-feature-designer    \
     -no-feature-http        \
     -no-feature-network     \
     -no-feature-sql         \
-    -no-feature-linguist    \
     -no-feature-sqlmodel    \
     -no-feature-wizard      \
     -no-feature-xmlstream
+
 
 cmake --build . --parallel
 cmake --install .
