@@ -11,7 +11,7 @@ ln -s /usr/bin/python3 /usr/bin/python
 git clone -b $VERSION --single-branch $QT_GIT   ;true
 cd qt5;
 
-perl init-repository --module-subset=essential,-qtdoc,-qttools,qtbase,qtcharts,qtdeclarative,qtimageformats,\
+perl init-repository --module-subset=essential,-qtdoc,qttools,qtbase,qtcharts,qtdeclarative,qtimageformats,\
 qtshadertools,qtsvg,qttranslations,qtvirtualkeyboard,qtwayland
 
 mkdir build

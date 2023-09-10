@@ -14,7 +14,7 @@ ln -s /usr/bin/python3 /usr/bin/python; true
 git clone -b $VERSION --single-branch $QT_GIT; true
 cd qt5;
 
-perl init-repository --module-subset=essential,-qtdoc,-qttools,qtbase,qtcharts,qtdeclarative,qtimageformats,\
+perl init-repository --module-subset=essential,-qtdoc,qttools,qtbase,qtcharts,qtdeclarative,qtimageformats,\
 qtshadertools,qtsvg,qttranslations,qtvirtualkeyboard,qtwayland
 
 mkdir build
@@ -56,7 +56,10 @@ cd build
     -no-feature-sql         \
     -no-feature-sqlmodel    \
     -no-feature-wizard      \
-    -no-feature-xmlstream
+    -no-feature-xmlstream   \
+    -no-feature-linguist    \
+    -no-feature-designer    \
+    -no-feature-assistant
 
 
 cmake --build . --parallel
