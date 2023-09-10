@@ -25,8 +25,16 @@ cd build
     -system-harfbuzz        \
     -system-sqlite          \
     -qt-doubleconversion    \
+    -qt-libb2               \
+    -qt-pcre                \
+    -qt-libjpeg             \
+    -qt-libpng              \
+    -qt-libmd4c             \
     -no-rpath               \
     -no-icu                 \
+    -no-tiff                \
+    -no-webp                \
+    -no-pch                 \
     -skip qtwebengine       \
     -skip qt3d              \
     -skip qtquick3d         \
@@ -36,7 +44,15 @@ cd build
     -skip qthttpserver      \
     -skip qtlanguageserver  \
     -skip qtpositioning     \
-    -skip qtlocation
+    -skip qtlocation        \
+    -no-feature-androiddeployqt \
+    -no-feature-assistant   \
+    -no-feature-designer    \ 
+    -no-feature-http        \
+    -no-feature-linguist    \
+    -no-feature-sqlmodel    \
+    -no-feature-wizard      \
+    -no-feature-xmlstream
 
 cmake --build . --parallel
 cmake --install .
