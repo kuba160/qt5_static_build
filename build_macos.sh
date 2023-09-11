@@ -54,7 +54,6 @@ cd build
     -no-feature-http        \
     -no-feature-sql         \
     -no-feature-sqlmodel    \
-    -no-feature-wizard      \
     -no-feature-linguist    \
     -no-feature-designer    \
     -no-feature-assistant
