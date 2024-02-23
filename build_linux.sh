@@ -36,7 +36,8 @@ cd build
     -skip qthttpserver      \
     -skip qtlanguageserver  \
     -skip qtpositioning     \
-    -skip qtlocation
+    -skip qtlocation        \
+    -skip qtgraphs
 
 cmake --build . --parallel
 cmake --install .

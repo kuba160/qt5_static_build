@@ -41,7 +41,8 @@ cd build
     -skip qthttpserver      \
     -skip qtlanguageserver  \
     -skip qtpositioning     \
-    -skip qtlocation
+    -skip qtlocation        \
+    -skip qtgraphs
     # missing iconv
 
 cmake --build . --parallel
