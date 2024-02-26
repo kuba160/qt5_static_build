@@ -25,6 +25,8 @@ cd build
     -system-harfbuzz        \
     -system-sqlite          \
     -qt-doubleconversion    \
+    -qt-pcre                \
+    -qt-tiff                \
     -no-rpath               \
     -no-icu                 \
     -skip qtwebengine       \
@@ -39,6 +41,7 @@ cd build
     -skip qtlocation        \
     -skip qtgraphs          \
     -skip qtspeech
+    # -ccache
 
 cmake --build . --parallel
 cmake --install .

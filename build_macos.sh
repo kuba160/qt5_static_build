@@ -29,6 +29,7 @@ cd build
     -qt-libjpeg             \
     -qt-freetype            \
     -qt-pcre                \
+    -qt-tiff                \
     -no-rpath               \
     -no-icu                 \
     -dbus-runtime           \
