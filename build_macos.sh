@@ -1,6 +1,6 @@
 #!/bin/sh
 set -x
-export VERSION=6.6.2
+export VERSION=6.8.0
 export QT_GIT=git://code.qt.io/qt/qt5.git
 export MAIN_DIR="`pwd`"
 export OUTPUT_DIR="`pwd`/qt5/build/qt5_static"

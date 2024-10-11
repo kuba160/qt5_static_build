@@ -16,9 +16,35 @@ jobs:
         sed -i '/deb-src/s/^#//g' /etc/apt/sources.list
         apt-get -qq update
         apt-get build-dep -y -qq qt6-base-dev
-        apt-get install -y -qq libxcb-xinerama0-dev git zip perl cmake
-        apt-get install -y -qq '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev \
-          libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+        apt-get install -y -qq git zip perl cmake
+        apt-get install \
+                  libfontconfig1-dev \
+                  libfreetype-dev \
+                  libx11-dev \
+                  libx11-xcb-dev \
+                  libxcb-cursor-dev \
+                  libxcb-glx0-dev \
+                  libxcb-icccm4-dev \
+                  libxcb-image0-dev \
+                  libxcb-keysyms1-dev \
+                  libxcb-randr0-dev \
+                  libxcb-render-util0-dev \
+                  libxcb-shape0-dev \
+                  libxcb-shm0-dev \
+                  libxcb-sync-dev \
+                  libxcb-util-dev \
+                  libxcb-xfixes0-dev \
+                  libxcb-xinerama0-dev \
+                  libxcb-xkb-dev \
+                  libxcb1-dev \
+                  libxext-dev \
+                  libxfixes-dev \
+                  libxi-dev \
+                  libxkbcommon-dev \
+                  libxkbcommon-x11-dev \
+                  libxrender-dev
+        # apt-get install -y -qq '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev \
+        #   libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
     - name: Checkout for Linux
       uses: actions/checkout@v1
     - name: Build for Linux
