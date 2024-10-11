@@ -50,7 +50,7 @@ jobs:
     - name: Build for Linux
       run: chmod +x ./build_linux.sh; ./build_linux.sh
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: linux
         path: /*.zip
@@ -63,7 +63,7 @@ jobs:
     - name: Build for macOS
       run: chmod +x ./build_macos.sh; ./build_macos.sh
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: macos
         path: qt5/build/*.zip
