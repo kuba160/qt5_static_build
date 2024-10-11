@@ -17,7 +17,7 @@ jobs:
         apt-get -qq update
         apt-get build-dep -y -qq qt6-base-dev
         apt-get install -y -qq git zip perl cmake
-        apt-get install \
+        apt-get install -y -qq \
                   libfontconfig1-dev \
                   libfreetype-dev \
                   libx11-dev \
